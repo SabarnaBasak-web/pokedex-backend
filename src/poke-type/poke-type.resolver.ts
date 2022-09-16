@@ -5,7 +5,7 @@ import { PokeType } from './Poketype.type';
 @Resolver((of) => PokeType)
 export class PokeTypeResolver {
   constructor(private pokeTypeService: PokeTypeService) {}
-  @Query((returns) => PokeType)
+  @Query((returns) => [PokeType])
   async getAllPokemonType() {
     return this.pokeTypeService.getAllPokemonTypes();
   }

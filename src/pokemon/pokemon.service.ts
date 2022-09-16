@@ -17,6 +17,16 @@ export class PokemonService {
     return response;
   }
 
+  async getAllPokemonByType(type: string): Promise<Pokemon[]> {
+    const response = await this.pokemonModel.findAll<Pokemon>({
+      where: {
+        type: type,
+      },
+    });
+
+    return response;
+  }
+
   async createPokemonEntry(
     createPokemonDto: CreatePokemonDTO,
   ): Promise<Pokemon> {

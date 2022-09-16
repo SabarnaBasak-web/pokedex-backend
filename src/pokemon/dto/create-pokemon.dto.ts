@@ -1,5 +1,4 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { PokeTypeModel } from 'src/poke-type/pokeType.model';
 
 @InputType()
 export class CreatePokemonDTO {

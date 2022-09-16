@@ -11,6 +11,11 @@ export class PokemonResolver {
     return this.pokemonService.getAllPokemon();
   }
 
+  @Query((returns) => [Pokemon])
+  async getAllPokemonsByType(@Args('type') type: string) {
+    return this.pokemonService.getAllPokemonByType(type);
+  }
+
   @Mutation((returns) => Pokemon)
   async addPokemon(
     @Args('createPokemonDTO') createPokemondto: CreatePokemonDTO,

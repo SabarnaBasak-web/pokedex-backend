@@ -30,8 +30,9 @@ type Pokemon {
 
 type Query {
   lesson: Lesson!
-  getAllPokemonType: PokeType!
+  getAllPokemonType: [PokeType!]!
   getAllPokemons: [Pokemon!]!
+  getAllPokemonsByType(type: String!): [Pokemon!]!
 }
 
 type Mutation {
