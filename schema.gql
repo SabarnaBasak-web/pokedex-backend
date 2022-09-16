@@ -31,7 +31,7 @@ type Pokemon {
 type Query {
   lesson: Lesson!
   getAllPokemonType: PokeType!
-  getAllPokemons: Pokemon!
+  getAllPokemons: [Pokemon!]!
 }
 
 type Mutation {

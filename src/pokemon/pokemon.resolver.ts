@@ -6,7 +6,7 @@ import { Pokemon } from './Pokemon.type';
 @Resolver((of) => Pokemon)
 export class PokemonResolver {
   constructor(private pokemonService: PokemonService) {}
-  @Query((returns) => Pokemon)
+  @Query((returns) => [Pokemon])
   async getAllPokemons() {
     return this.pokemonService.getAllPokemon();
   }
