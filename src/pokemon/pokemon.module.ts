@@ -6,7 +6,7 @@ import { PokemonResolver } from './pokemon.resolver';
 import { PokeTypeModel } from 'src/poke-type/pokeType.model';
 
 @Module({
-  imports: [SequelizeModule.forFeature([Pokemon])],
+  imports: [SequelizeModule.forFeature([Pokemon, PokeTypeModel])],
   providers: [PokemonService, PokemonResolver],
 })
 export class PokemonModule {}

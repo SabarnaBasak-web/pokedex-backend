@@ -1,4 +1,4 @@
-import { BelongsTo, Column, Model, Table } from 'sequelize-typescript';
+import { Column, HasMany, Model, Table } from 'sequelize-typescript';
 import { PokeTypeModel } from 'src/poke-type/pokeType.model';
 
 @Table

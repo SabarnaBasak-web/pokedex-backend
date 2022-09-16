@@ -8,4 +8,5 @@ export const sequelizeConfig: SequelizeModule = {
   password: '12345',
   database: 'taskManagement',
   autoLoadModels: true,
+  synchronize: true,
 };
