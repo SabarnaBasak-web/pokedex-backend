@@ -14,4 +14,9 @@ export class PokeTypeResolver {
   async addPokemonType(@Args('type') type: string) {
     return this.pokeTypeService.addPokemonType(type);
   }
+
+  @Mutation((returns) => Boolean)
+  async updatePokemonType(@Args('id') id: number, @Args('type') type: string) {
+    return this.pokeTypeService.updatePokeType(id, type);
+  }
 }

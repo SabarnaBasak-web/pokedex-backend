@@ -38,6 +38,7 @@ type Query {
 type Mutation {
   createUser: User!
   addPokemonType(type: String!): PokeType!
+  updatePokemonType(id: Float!, type: String!): Boolean!
   addPokemon(createPokemonDTO: CreatePokemonDTO!): Pokemon!
 }
 
